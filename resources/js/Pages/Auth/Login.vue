@@ -6,6 +6,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
 defineProps({
     canResetPassword: {
@@ -35,6 +36,25 @@ const submit = () => {
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
+        </div>
+
+        <div class="
+            my-14
+            flex flex-col sm:justify-center items-center">
+
+            <ApplicationLogo class="
+                    w-60 h-30
+                    mb-0
+                    fill-current"
+            />
+
+            <h1 class="
+                    mt-0
+                    font-sf font-semibold text-3xl
+                    user-select-none"
+            >
+                Добро пожаловать
+            </h1>
         </div>
 
         <form @submit.prevent="submit">
